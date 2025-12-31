@@ -1,0 +1,269 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - My E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Categories</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Electronics">
+      <h3>Electronics</h3>
+      <p>Smartphones, Laptops, Gadgets</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Clothing">
+      <h3>Clothing</h3>
+      <p>Trendy fashion for men & women</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Books">
+      <h3>Books</h3>
+      <p>Educational & Entertainment</p>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x150" alt="Footwear">
+      <h3>Footwear</h3>
+      <p>Sneakers, Sandals & More</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 My E-Commerce Website</p>
+  </footer>
+</body>
+</html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <section id="header">
+    <h3><icon>♻</icon> Online Buy and Exchange Websites</h3>
+    <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+  </div>
+  </nav>
+<div>
+  <ul id="navbar">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="shop.html"> Shop </a></li>
+       <li><a href="login.html"> Login </a></li>
+       <li><a class="active"href="about.html">  About </a></li>
+       <li><a href="contact.html"> Contact </a></li>
+       <li><a href="cart.html"><icon> 🛒 </icon></li>
+  </ul>
+</div>
+  <style>
+    /* ---------- Global Styles ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ---------- Category Section ---------- */
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #023e8a;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .category-card img {
+      width: 80%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .category-card h3 {
+      text-align: center;
+      padding: 15px;
+      font-size: 1.2rem;
+      color: #0077b6;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background-color: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #dbcd84;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      .category-card h3 {
+        font-size: 1rem;
+      }
+    }
+    
+    /* ---------- Navigation ---------- */
+ #navbar{
+  display: flex;
+   align-items: right;
+    justify-content: right;
+}
+#navbar li{
+list-style: none;
+padding: 0 20px;
+position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #d3e8d1;
+  transition: 0.3s ease;
+  background-color: #0077b6;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color:#0cf113;
+  
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content:"";
+  width: 30%;
+  height:2px;
+  background:#810808;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    🛍️ Online Buy & Exchange
+  </header>
+
+  <div class="container">
+    <h2>Browse by Category</h2>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://assets.thehansindia.com/h-upload/2023/04/26/1348625-dell.webp" alt="">
+         <div class="des">
+        <h3>Electronics</h3>
+      </div>
+
+      <div class="category-card">
+        <img src="https://5.imimg.com/data5/ECOM/Default/2023/8/337760029/XH/QX/IH/45978459/1657023474674-img-20220623-wa0003-originnm80prcnt-500x500.jpg" >
+         <div class="des">" alt="Fashion">
+        <h3>Fashion</h3>
+      </div>
+
+      <div class="category-card">
+        <img src="https://static1.industrybuying.com/products/corporate-gifts/corporate-gifts/water-bottles/COR.WAT.75854042_1668211104537.webp" >
+         <div class="des">" alt="bottels">
+        <h3>bottels</h3>
+      </div>
+
+      <div class="category-card">
+        <img src="https://blog.woodenstreet.com/images/data/image_upload/1591340157blo2.jpg">
+        <div class="des">
+         alt="Furniture">
+        <h3>Furniture</h3>
+      </div>
+
+      <div class="category-card">
+        <img src="https://www.shutterstock.com/image-vector/collection-sports-fitness-equipment-set-260nw-2667975555.jpg">
+        <div class="des">
+         alt="Sports">
+        <h3>Sports & Fitness</h3>
+      </div>
+
+      <div class="category-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5liysXcUaNKlR9W8ihjvz7wNMP5SWOPviYQ&s">
+        <div class="des">
+         alt="Home Appliances">
+        <h3>Home Appliances</h3>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Online Buy & Exchange | Designed by <a href="#">Your Team Name</a>
+  </footer>
+
+</body>
+</html>
+

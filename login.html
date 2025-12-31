@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Login</title>
+  <style>
+
+
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+       background-image: url("https://img.pikbest.com/wp/202345/shop-features-blue-background-featuring-3d-rendered-shopping-bags-in-yellow-and-orange_9609772.jpg!sw800");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      
+   /*   background: linear-gradient(135deg, #667eea, #764ba2);*/
+    }
+
+    .login-container {
+      background: white;
+      padding: 40px 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .input-group input:focus {
+      border-color: #764ba2;
+      box-shadow: 0 0 8px rgba(118, 75, 162, 0.3);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #764ba2;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #5b3a82;
+    }
+
+    .extra-links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .extra-links a {
+      text-decoration: none;
+      color: #764ba2;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Welcome Back</h2>
+    <div class="input-group">
+      <input type="email" id="email" placeholder="Enter your email">
+      <div class="error" id="emailError">Please enter a valid email</div>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Enter your password">
+      <div class="error" id="passwordError">Password must be at least 6 characters</div>
+    </div>
+    <button class="btn" onclick="validateForm()">Login</button>
+    <div class="extra-links">
+      <a href="#">Forgot Password?</a> | 
+      <a href="#">Create Account</a>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+
+      let isValid = true;
+
+      // Email validation
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.value.match(emailPattern)) {
+        emailError.style.display = "block";
+        isValid = false;
+      } else {
+        emailError.style.display = "none";
+      }
+
+      // Password validation
+      if (password.value.length < 6) {
+        passwordError.style.display = "block";
+        isValid = false;
+      } else {
+        passwordError.style.display = "none";
+      }
+
+      if (isValid) {
+        alert("Login Successful!");
+      }
+    }
+  </script>
+
+</body>
+</html>
